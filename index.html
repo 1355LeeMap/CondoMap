@@ -18,11 +18,64 @@
     <title>1355 Lee</title>
     <script src="js/phaser.min.js"></script>
     <script src="js/map.js"></script>
+
+    <style>
+        .popup {
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        left: 50%;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        }
+        .popup .popuptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: #ffffff;
+        color: #303030;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+        }
+        .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        }
+        .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+        }
+        @-webkit-keyframes fadeIn {
+        from {opacity: 0;} 
+        to {opacity: 1;}
+        }
+        @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:1 ;}
+        }
+    </style>
 </head>
-<style>
-</style>
 <body style="background-color:black;">
     <input type="text" id="searchField" placeholder="Search Unit#" style="font-size: 24px; position: absolute; top: 3%; left: 3%;">
     <button type="button" style="font-size: 24px; position: absolute; top: 10%; left: 3%;" onclick="direction()">Direction</button>
+    <img src="img/info.png" style="position: absolute; bottom: 5%; right: 5%;" onclick="infoButton()">
+    <div class="popup">
+        <span class="popuptext" id="infoPopup" onclick="infoButton()">Powered by GitHub Page.  Source code at <a href="https://github.com/1355LeeMap/CondoMap">GitHub</a>.<br>  Contact: 1355leemap@gmail.com</span>
+    </div>
 </body>
 </html>
