@@ -4,6 +4,16 @@
 <title>Page Title</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MQBRDWNXG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3MQBRDWNXG');
+    </script>
+    
     <meta charset="UTF-8">
     <title>1355 Lee</title>
     <script src="js/phaser.min.js"></script>
@@ -12,7 +22,6 @@
 <style>
 </style>
 <body style="background-color:black;">
-    <!-- <a href="http://maps.apple.com/?q=49.796086, -97.172578">Google MAP</a> -->
     <input type="text" id="searchField" placeholder="Search Unit#" style="font-size: 24px; position: absolute; top: 3%; left: 3%;">
     <button type="button" style="font-size: 24px; position: absolute; top: 10%; left: 3%;" onclick="direction()">Direction</button>
 </body>
