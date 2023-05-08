@@ -300,3 +300,10 @@ function direction() {
     let url = "http://maps.apple.com/?saddr=My+Location&daddr="+ selectedUnit.gpsX + ", " + selectedUnit.gpsY;
     window.location = url;
 }
+
+
+
+function infoButton() {
+    var popup = document.getElementById("infoPopup");
+    popup.classList.toggle("show");
+  }
